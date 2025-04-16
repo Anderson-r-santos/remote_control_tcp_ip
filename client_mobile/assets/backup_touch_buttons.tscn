@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2rkqbx48hffp"]
+
+[ext_resource type="Texture2D" uid="uid://df361qhk5dxvy" path="res://icons/left_button.png" id="1_g8rev"]
+[ext_resource type="Texture2D" uid="uid://ceqs77skr84ug" path="res://icons/right_button.png" id="2_6o0w6"]
+[ext_resource type="Texture2D" uid="uid://d25ishtnhyb42" path="res://icons/accelerate_button.png" id="3_2334f"]
+[ext_resource type="Texture2D" uid="uid://b7gg0vdxadgg1" path="res://icons/break_button.png" id="4_y560h"]
+
+[node name="backup_touch_buttons" type="Node3D"]
+
+[node name="left_button" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(71, 510)
+scale = Vector2(0.179687, 0.179687)
+texture_normal = ExtResource("1_g8rev")
+action = "left"
+
+[node name="right_button" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(316, 510)
+scale = Vector2(0.179687, 0.179687)
+texture_normal = ExtResource("2_6o0w6")
+action = "right"
+
+[node name="accelerate_button" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(778, 386)
+scale = Vector2(0.417968, 0.33789)
+texture_normal = ExtResource("3_2334f")
+action = "accelerate"
+
+[node name="break_button" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2(946, 471)
+scale = Vector2(0.417968, 0.33789)
+texture_normal = ExtResource("4_y560h")
+action = "break"
