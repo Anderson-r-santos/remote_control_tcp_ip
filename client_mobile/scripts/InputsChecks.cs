@@ -26,7 +26,7 @@ public partial class InputsChecks : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	private void checkButton(string actionName,ref char button)
 	{
-		//scGround.stopMoviment();
+
 	 	if(Input.IsActionPressed(actionName))
 		{
 			button = '1';
@@ -38,7 +38,7 @@ public partial class InputsChecks : Node
 	}
 		private void checkButtonInverse(string actionName,ref char button)
 	{
-		//scGround.stopMoviment();
+
 	 	if(Input.IsActionPressed(actionName))
 		{
 			button = '0';
@@ -53,12 +53,12 @@ public partial class InputsChecks : Node
 	private void serializeData()
 	{
 		byte[] data = new byte[4];
-		//GD.Print("left :" + left);
+
 		data[0] = (byte)(left);
 		data[1] = (byte)(right);
 		data[2] = (byte)(brake);
 		data[3] = (byte)(accelerate);
-		///data = left.ToString() + right.ToString()  + brake.ToString() + accelerate.ToString() + "\n";
+
 		string s = "";
 		for (int i = 0; i < data.Length; i++)
 		{
@@ -73,7 +73,5 @@ public partial class InputsChecks : Node
 		checkButton("right",ref right);
 		checkButton("accelerate",ref accelerate);
 		checkButton("break",ref brake);
-		
-		//serializeData();
 	}
 }

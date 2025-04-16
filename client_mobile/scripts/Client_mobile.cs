@@ -14,7 +14,7 @@ public partial class Client_mobile : Node
 	{
 		statusConnection = GetNode<Label>("../status_connection");
 		client = new StreamPeerTcp();
-		GD.Print(client.ConnectToHost("10.0.0.145",9001));
+		GD.Print(client.ConnectToHost("10.0.0.145",9001)); //mudar o ip e a porta de acordo com a escolhida no servidor
 	}
 
 	private void tryConnetToServer()
@@ -63,9 +63,6 @@ public partial class Client_mobile : Node
 	}
 	public override void _Process(double delta)
 	{
-		// if(client.GetStatus() == StreamPeerTcp.Status.Connected)
-		// {
-		// 	readDataFromServer();
-		// }
+
 	}
 }
